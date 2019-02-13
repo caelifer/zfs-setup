@@ -83,8 +83,7 @@ __
 	for i in $(seq 0 $DISK_COUNT)
 	do
 		cat <<__
-gpart delete -i 1 ada$i
-gpart destroy ada$i
+gpart destroy -F ada$i
 __
 	done
 }
